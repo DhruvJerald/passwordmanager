@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Manager</title>
+    <link rel="icon"  type="image/svg" href="key-svgrepo-com.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+
+    <div class="container">
+        <h1>Password Manager</h1>
+        
+        <!-- Password Generator Section -->
+        <section class="password-generator">
+            <h2>Generate a Strong Password</h2>
+            <button id="generate-password-btn">Generate Password</button>
+            <input type="text" id="generated-password" readonly>
+            <button id="copy-btn">Copy</button>
+        </section>
+
+        <!-- Password Strength Meter -->
+        <section>
+            <h2>Password Strength</h2>
+            <div class="strength-meter">
+                <div id="strength-meter-fill" class="strength-meter-fill"></div>
+            </div>
+        </section>
+
+       
+        <section>
+            <h2>Add Passwords</h2>
+            <form id="password-form" action="/submit" method="post">
+                <label for="website">Website:</label>
+                <input type="text" id="website" name="website" required>
+                
+                
+                <label for="username">Username:</label>
+                
+                
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                
+                <input type="password" id="password" name="password" required>
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Website</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="password-list">
+                <!-- Password rows will be dynamically added here -->
+            </tbody>
+        </table>
+    </section>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

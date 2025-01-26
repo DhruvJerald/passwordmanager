@@ -1,0 +1,180 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Naslagic&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Naslagic', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+nav {
+    background-color: #1f1f1f;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+    color: #b3b3b3;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+nav ul li:hover {
+    color: #00bcd4;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #1c1c1c;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    
+}
+
+section {
+    margin: 30px 0;
+}
+
+/* Password Generator */
+.password-generator {
+    padding: 25px;
+    background: linear-gradient(145deg, #1a1a1a, #262626);
+    border-radius: 12px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#generated-password {
+    width: 70%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background: #2b2b2b;
+    color: #00e5ff;
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+
+#generated-password:hover {
+    box-shadow: 0 0 15px #00e5ff;
+}
+
+/* Password Strength Meter */
+.strength-meter {
+    height: 10px;
+    border-radius: 5px;
+    margin: 10px auto;
+    width: 70%;
+    background: #333;
+    overflow: hidden;
+}
+
+.strength-meter-fill {
+    height: 100%;
+    transition: width 0.3s ease-in-out;
+}
+
+.strength-meter-fill.weak {
+    width: 25%;
+    background-color: #e74c3c;
+}
+
+.strength-meter-fill.medium {
+    width: 50%;
+    background-color: #f1c40f;
+}
+
+.strength-meter-fill.strong {
+    width: 75%;
+    background-color: #2ecc71;
+}
+
+.strength-meter-fill.very-strong {
+    width: 100%;
+    background-color: #3498db;
+}
+
+button {
+    padding: 12px 20px;
+    margin: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(145deg, #00bcd4, #008ba3);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0, 188, 212, 0.5);
+}
+
+button:active {
+    transform: scale(1);
+    box-shadow: none;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+table th, table td {
+    border: 1px solid #333;
+    padding: 12px;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+table th {
+    background-color: #292929;
+    color: #00e5ff;
+}
+
+table td button {
+    padding: 8px 15px;
+    background: linear-gradient(145deg, #e74c3c, #c0392b);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+table td button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.5);
+}
+
